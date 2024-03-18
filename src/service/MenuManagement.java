@@ -1,5 +1,6 @@
 package service;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MenuManagement {
@@ -10,7 +11,7 @@ public class MenuManagement {
 
         while (true) {
             showConten();
-            int featureChoose = new Scanner(System.in).nextInt();
+            int featureChoose = chooseFeature();
             switch (featureChoose) {
                 case 1:
                     customerService.inputCustomer();
@@ -39,7 +40,22 @@ public class MenuManagement {
             }
         }
     }
+private int chooseFeature(){
+    int featureChoose ;
+    while (true){
+        try{
+            featureChoose = new Scanner(System.in).nextInt();
+            if (featureChoose>0&&featureChoose<9){
+                break;
+            }
+            throw new InputMismatchException();
+        }catch (InputMismatchException e){
+            System.out.println("chuc nang ko hop le, vui long nhap lai");
 
+        }
+    }
+    return featureChoose;
+}
     private void showConten() {
         System.out.println("-------phan men quan li so tiet kiem--------");
         System.out.println("1. them moi kh:");

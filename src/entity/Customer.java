@@ -68,6 +68,10 @@ public class Customer {
             }
             System.out.println("sdt ko dung dinh dang, hay nhap lai");
         }
+        inputCustomerType();
+    }
+
+    private void inputCustomerType() {
         System.out.println("chon loai kh: ");
         System.out.println("1, kh ca nhan");
         System.out.println("2. kh tap the");
@@ -82,7 +86,7 @@ public class Customer {
                 }
                 throw new InputMismatchException();
             }catch (InputMismatchException e){
-                System.out.println("so luong kh la 1 so nguyen duong, vui long nhap lai");
+                System.out.println("loai kh la 1 so nguyen duong trong khoang tu 1 den 3, vui long nhap lai");
 
             }
         }
