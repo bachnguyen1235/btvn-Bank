@@ -3,9 +3,9 @@ package service;
 import java.util.Scanner;
 
 public class MenuManagement {
-    private final SavingAccoutManagementsService savingAccoutManagementsService = new SavingAccoutManagementsService(customerService, bankService);
     private final CustomerService customerService = new CustomerService();
     private final BankService bankService = new BankService();
+    private final SavingAccoutManagementsService savingAccoutManagementsService = new SavingAccoutManagementsService(customerService, bankService);
     public void menu() {
 
         while (true) {

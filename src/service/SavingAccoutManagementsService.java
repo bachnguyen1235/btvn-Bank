@@ -10,10 +10,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SavingAccoutManagementsService {
-    private CustomerService customerService;
-    private BankService bankService;
-    private List<SavingAccountManagement> savingAccountManagements = new ArrayList<>();
-
+     private CustomerService customerService ;
+     private BankService bankService;
+    private  List<SavingAccountManagement> savingAccountManagements = new ArrayList<>();
     public void showSavingAccountManagements() {
         savingAccountManagements.forEach(System.out::println);
     }
@@ -33,40 +32,41 @@ public class SavingAccoutManagementsService {
             int customerID;
             while (true) {
                 customerID = new Scanner(System.in).nextInt();
-                customer = customerService.findById(customerID);
+                customer= customerService.findById(customerID);
                 if (customer != null) {
                     break;
                 }
                 System.out.println("ma kh ko ton tai, hay nhap lai");
             }
-            System.out.println("nhap so luong ngan hang gui tiet kiem:");
-            int bankNumber = new Scanner(System.in).nextInt();
-            List<SavingAccount> savingAccounts = new ArrayList<>();
-            for (int j = 0; j < bankNumber; j++) {
-                System.out.println("nhap thong tin cho so: " + (j + 1));
-                System.out.println("nhap ma ngan hang muon gui:");
-                Bank bank = null;
-                int bankID;
-                while (true) {
-                    customerID = new Scanner(System.in).nextInt();
-                    bank = bankService.findByID(customerID);
 
-                }
-                if (bank != null) {
-                    break;
-                }
-                System.out.println("ma bank ko ton tai, hay nhap lai");
-            }
-
-            System.out.println(" nhap so tien muon gui o ngan hang nay");
-            double money = new Scanner(System.in).nextInt();
-            SavingAccount savingAccount = new SavingAccount(bank, money);
-            savingAccounts.add(savingAccount);
-
+            List<SavingAccount> savingAccounts = savingAccounts();
+            SavingAccountManagement savingAccountManagement = new SavingAccountManagement(customer, savingAccounts);
         }
-        SavingAccountManagement savingAccountManagement = new SavingAccountManagement(customer, savingAccounts);
     }
-}
+private List<SavingAccount> savingAccounts(){
+    System.out.println("nhap so luong ngan hang gui tiet kiem:");
+    int bankNumber = new Scanner(System.in).nextInt();
+    List<SavingAccount> savingAccounts = new ArrayList<>();
+    for (int j = 0; j < bankNumber; j++) {
+        System.out.println("nhap thong tin cho so: " + (j + 1));
+        System.out.println("nhap ma ngan hang muon gui:");
+        Bank bank = null;
+        int bankID;
+        while (true) {
+            bankID = new Scanner(System.in).nextInt();
+            bank= bankService.findByID(bankID);
+            if (bank != null) {
+                break;
+            }
+            System.out.println("ma bank ko ton tai, hay nhap lai");
+        }
 
+        System.out.println(" nhap so tien muon gui o ngan hang nay");
+        double money = new Scanner(System.in).nextInt();
+        SavingAccount savingAccount = new SavingAccount(bank, money);
+        savingAccounts.add(savingAccount);
+    }
+    return savingAccounts;
+}
 
 }
