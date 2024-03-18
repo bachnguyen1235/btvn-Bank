@@ -2,6 +2,7 @@ package entity;
 
 import statics.CustomerType;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Customer {
@@ -59,12 +60,32 @@ public class Customer {
         this.setAddress(new Scanner(System.in).nextLine());
         System.out.println("nhap sdt: ");
         this.setPhoneNumber(new Scanner(System.in).nextLine());
+        while (true) {
+            String tempPhone = new Scanner(System.in).nextLine();
+            if (tempPhone.matches("[^0d\\{9}]")) {
+                this.setPhoneNumber(new Scanner(System.in).nextLine());
+                break;
+            }
+            System.out.println("sdt ko dung dinh dang, hay nhap lai");
+        }
         System.out.println("chon loai kh: ");
         System.out.println("1, kh ca nhan");
         System.out.println("2. kh tap the");
         System.out.println("3. kh doanh nghiep");
         System.out.println("moi chon");
-        int customerTypeChoose = new Scanner(System.in).nextInt();
+        int customerTypeChoose;
+        while (true){
+            try{
+                customerTypeChoose = new Scanner(System.in).nextInt();
+                if (customerTypeChoose>0&&customerTypeChoose<3){
+                    break;
+                }
+                throw new InputMismatchException();
+            }catch (InputMismatchException e){
+                System.out.println("so luong kh la 1 so nguyen duong, vui long nhap lai");
+
+            }
+        }
         switch (customerTypeChoose) {
             case 1:
                 this.setType(CustomerType.PERSONAL);

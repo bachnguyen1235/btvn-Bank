@@ -27,23 +27,29 @@ public class SavingAccoutManagementsService {
         int customerNumber = new Scanner(System.in).nextInt();
         for (int i = 0; i < customerNumber; i++) {
             System.out.println("nhap thong tin gui tiet kiem cho kh thu: " + (i + 1));
-            System.out.println("nhap ma kh:");
-            Customer customer = null;
-            int customerID;
-            while (true) {
-                customerID = new Scanner(System.in).nextInt();
-                customer= customerService.findById(customerID);
-                if (customer != null) {
-                    break;
-                }
-                System.out.println("ma kh ko ton tai, hay nhap lai");
-            }
-
+           Customer customer = inputCustomer();
             List<SavingAccount> savingAccounts = savingAccounts();
             SavingAccountManagement savingAccountManagement = new SavingAccountManagement(customer, savingAccounts);
         }
     }
-private List<SavingAccount> savingAccounts(){
+
+    private Customer inputCustomer() {
+        System.out.println("nhap ma kh:");
+        Customer customer = null;
+        int customerID;
+        while (true) {
+            customerID = new Scanner(System.in).nextInt();
+            customer= customerService.findById(customerID);
+            if (customer != null) {
+                break;
+            }
+            System.out.println("ma kh ko ton tai, hay nhap lai");
+        }
+
+        return customer;
+    }
+
+    private List<SavingAccount> savingAccounts(){
     System.out.println("nhap so luong ngan hang gui tiet kiem:");
     int bankNumber = new Scanner(System.in).nextInt();
     List<SavingAccount> savingAccounts = new ArrayList<>();
