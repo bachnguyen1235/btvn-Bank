@@ -4,26 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62018359-6da6-4fc9-b1b1-e36e4691055f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/entity/Bank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/SavingAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/SavingAccountManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/SavingAccoutManagementsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/statics/CustomerType.java" afterDir="false" />
+    <list default="true" id="62018359-6da6-4fc9-b1b1-e36e4691055f" name="Changes" comment="lam lai btvn">
+      <change afterPath="$PROJECT_DIR$/src/service/MenuManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Bank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Saving.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Bank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BankService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ClientService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/InputService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/BankView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ClientView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/IOput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/SavingAccoutManagementsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/SavingAccoutManagementsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,11 +86,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710433920245</updated>
-      <workItem from="1710433921367" duration="36589000" />
+      <workItem from="1710433921367" duration="41983000" />
     </task>
+    <task id="LOCAL-00001" summary="lam lai btvn">
+      <option name="closed" value="true" />
+      <created>1710737201019</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710737201019</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lam lai btvn" />
+    <option name="LAST_COMMIT_MESSAGE" value="lam lai btvn" />
   </component>
 </project>

@@ -46,4 +46,8 @@ public void inputNewBank(){
                 ", interestRast=" + interestRast +
                 '}';
     }
+
+    public int getId() {
+        return id;
+    }
 }
