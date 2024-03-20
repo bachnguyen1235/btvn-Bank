@@ -25,6 +25,7 @@ public class SavingAccoutManagementsService {
     public void creatSavingAccount() {
         System.out.println("co bao nhieu kh muon gui tiet kiem: ");
         int customerNumber = new Scanner(System.in).nextInt();
+
         for (int i = 0; i < customerNumber; i++) {
             System.out.println("nhap thong tin gui tiet kiem cho kh thu: " + (i + 1));
            Customer customer = inputCustomer();

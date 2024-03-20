@@ -1,5 +1,6 @@
 package entity;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Bank {
@@ -35,7 +36,19 @@ public void inputNewBank(){
     System.out.println("nhap name bank:");
     name = new Scanner(System.in).nextLine();
     System.out.println("nhap lai suat");
-    interestRast = new Scanner(System.in).nextDouble();
+    while (true){
+        try{
+            float interestRast = new Scanner(System.in).nextFloat();
+            if (interestRast>0){
+                this.interestRast = interestRast;
+                break;
+            }
+            throw new InputMismatchException();
+        }catch (InputMismatchException e){
+            System.out.println("lai xuat la so duong, vui long nhap lai");
+
+        }
+    }
 }
 
     @Override

@@ -1,5 +1,7 @@
 package service;
 
+import util.IOUtil;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -41,20 +43,8 @@ public class MenuManagement {
         }
     }
 private int chooseFeature(){
-    int featureChoose ;
-    while (true){
-        try{
-            featureChoose = new Scanner(System.in).nextInt();
-            if (featureChoose>0&&featureChoose<9){
-                break;
-            }
-            throw new InputMismatchException();
-        }catch (InputMismatchException e){
-            System.out.println("chuc nang ko hop le, vui long nhap lai");
-
-        }
-    }
-    return featureChoose;
+    System.out.println("xin moi chon chuc nang:");
+    return IOUtil.inputIntNumber(1,9,"chuc nang ko hop le, hay nhap lai");
 }
     private void showConten() {
         System.out.println("-------phan men quan li so tiet kiem--------");
